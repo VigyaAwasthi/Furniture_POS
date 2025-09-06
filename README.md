@@ -57,7 +57,7 @@ docker-compose up -d
 **2) With local MariaDB / MySQL client**
 ```bash
 # start your DB and create a user with FILE privileges if you need OUTFILE capability
-mysql -u root -p < sql/etl-nakli.sql
+mysql -u root -p < sql/etl.sql
 # run the JSON export queries (they use INTO OUTFILE; edit paths in json.sql if needed)
 mysql -u root -p < sql/json.sql
 ```
