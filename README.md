@@ -78,11 +78,13 @@ mysql -u root -p < sql/json.sql
 
 Here is the high-level ERD:
 
-![ERD](docs/https://github.com/VigyaAwasthi/Furniture_POS/blob/main/erd.svg)
+![ERD](./docs/erd.svg)
+
 
 Example flow demo:
 
-![Demo GIF](docs/demo.gif)
+![Demo GIF](./docs/demo.gif)
+
 
 Run `./demo.sh` to test quickly with sample CSV data (included in `data/csv/`).
 
