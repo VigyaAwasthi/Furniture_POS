@@ -106,19 +106,10 @@ The SQL files you uploaded contain an academic honor code block which states tha
 ---
 
 ## Helpful files in this repo
-- `sql/etl-nakli.sql` — your main ETL, schema, views, procs, triggers.
+- `sql/etl.sql` — your main ETL, schema, views, procs, triggers.
 - `sql/json.sql` — JSON export queries for NoSQL ingestion (NOTE: uses `INTO OUTFILE`; adjust paths/permissions when running).
 - `docker-compose.yml` — optional local testbed (MariaDB + MongoDB).
 - `run_etl.sh` — convenience script to run the ETL and copy exported JSONs to `output/`.
-
----
-
-## Want me to:
-- ✨ Remove or redact the honor-code statement before making the repo public? (I can create a "public" cleaned version.)
-- 🖼️ Produce a prettier ERD SVG (I can generate one from the SQL schema)?
-- 🔁 Create a demo GitHub Actions workflow that runs the ETL and validates results automatically?
-
-Reply with which of the above you'd like me to do next and I'll update the repo files.
 
 ---
 
