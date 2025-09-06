@@ -10,15 +10,14 @@
 ```
 pos-etl-project/
 ├─ sql/
-│  ├─ etl-nakli.sql        # ETL + schema + views + procedures + triggers (from upload)
+│  ├─ etl.sql        # ETL + schema + views + procedures + triggers 
 │  └─ json.sql             # JSON-export queries to produce documents for NoSQL ingestion
 ├─ docs/
-│  ├─ flowchart.png        # Visual flowchart (generated)
-│  └─ course_reflection.md  # Reflection (converted)
+│  ├─ flowchart.png        # Visual flowchart 
 ├─ docker-compose.yml      # Optional: spin up MariaDB + MongoDB locally for testing
 ├─ run_etl.sh              # Helper script to run SQL ETL against a MySQL/MariaDB instance
-├─ .github/workflows/ci.yml# Example CI: run SQL import against mariadb service (template)
-├─ LICENSE                 # MIT License (change as needed)
+├─ .github/workflows/ci.yml# Example CI: run SQL import against mariadb service 
+├─ LICENSE                 # MIT License 
 └─ README.md
 ```
 
@@ -65,46 +64,6 @@ mysql -u root -p < sql/json.sql
 
 ---
 
-## Step-by-step: push to GitHub (exact commands)
-
-```bash
-git init
-git add .
-git commit -m "Initial: POS ETL pipeline, schema and ETL scripts"
-# create a GitHub repo on github.com (or use the CLI: gh repo create)
-git remote add origin git@github.com:<your-username>/pos-etl-project.git
-git branch -M main
-git push -u origin main
-```
-
-If you want a one-liner (after creating the repo on GitHub):
-```bash
-git push -u git@github.com:<your-username>/pos-etl-project.git main
-```
-
----
-
-## Notes on the uploaded SQL (important — read before publishing)
-
-The SQL files you uploaded contain an academic honor code block which states that they **should not be shared without written permission** from the course instructor. **Before you push this repository public**, confirm that you have permission to publish these files. If you *do not* have permission, either:
-
-- Make the repo **private**, or
-- Remove/replace the honor-code protected content (ask me and I can prepare a redacted copy), or
-- Contact the instructor to obtain written permission.
-
----
-
-## Tips to make the GitHub repo *extremely impressive*
-
-- Add a short demo GIF (showing the ETL run + simple query) in `docs/` and reference it in the README.
-- Add an `architecture.md` with an ERD (diagram generated using dbdiagram.io or draw.io) and include an SVG.
-- Add tests: small SQL unit tests (example queries with expected counts) and a CI workflow using GitHub Actions that spins up MariaDB and runs the ETL → verifies expected row counts.
-- Add a `data-preview/` folder with small sample CSVs (1–5 rows) so reviewers can reproduce quickly.
-- Include `usage` examples showing important queries (e.g., sales by product, top customers).
-- Provide a `LICENSE` and a short `CITATION.md` describing how to reference your work.
-
----
-
 ## Helpful files in this repo
 - `sql/etl.sql` — your main ETL, schema, views, procs, triggers.
 - `sql/json.sql` — JSON export queries for NoSQL ingestion (NOTE: uses `INTO OUTFILE`; adjust paths/permissions when running).
@@ -119,7 +78,7 @@ The SQL files you uploaded contain an academic honor code block which states tha
 
 Here is the high-level ERD:
 
-![ERD](docs/erd.svg)
+![ERD](docs/https://github.com/VigyaAwasthi/Furniture_POS/blob/main/erd.svg)
 
 Example flow demo:
 
