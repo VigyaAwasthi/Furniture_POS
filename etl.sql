@@ -50,12 +50,6 @@ CREATE TABLE Orderline (
         FOREIGN KEY (product_id) REFERENCES Product(id)
 )ENGINE=InnoDB;
 
-vi etl.sql
-
-further affirm that I have not and will not provide this code to any person, platform, or repository,
-without the express written permission of Dr. Gomillion. I understand that any violation of these
-standards will have serious repercussions. */
-
 SOURCE inf.sql; /*referencing the previous sql script for database creation and table schema*/
 
 LOAD DATA LOCAL INFILE 'products.csv'
@@ -117,13 +111,6 @@ GROUP BY order_id, product_id;
 
 DROP TABLE temp;
 
-34.235.144.83
-	
-	
-further affirm that I have not and will not provide this code to any person, platform, or repository,
-without the express written permission of Dr. Gomillion. I understand that any violation of these
-standards will have serious repercussions. */
-
 SOURCE inf.sql; /*referencing the previous sql script for database creation and table schema*/
 
 LOAD DATA LOCAL INFILE 'products.csv'
@@ -184,8 +171,6 @@ FROM temp
 GROUP BY order_id, product_id;
 
 DROP TABLE temp;
-
-34.235.144.83
 	
 vi views.sql
 
